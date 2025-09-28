@@ -7,12 +7,12 @@ export const getImagesByQuery = async (query, page = 1) => {
   const res = await axios(url, {
     params: {
       key,
-      quer: query,
+      q: query,
       image_type: 'photo',
       orientation: 'horizontal',
       safesearch: true,
       page,
-      per_page: 10,
+      per_page: 15,
     },
   });
   return {
